@@ -10,7 +10,7 @@ This project focuses on developing a sales forecasting model for Siemens using h
 (Provide a brief summary of the project objectives and expected outcomes.)  
 
 ## Dataset  
-- **Source**: The dataset is provided directly by Siemens.
+- **Source**: The dataset was by Siemens.
 - **Time Period**: 2.5 years  
 - **Features**: (Briefly describe key features in the dataset.)  
 
