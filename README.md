@@ -90,7 +90,6 @@ XGBoost with hyperparameter tuning was the most effective model overall. It hand
 ---
 
 ## Future Improvements  
-- Finalize preprocessing and automate the pipeline  
-- Integrate deep learning models for time series  
+- Finalize preprocessing and automate the pipeline   
 - Expand feature set (e.g., marketing events, customer data)  
 - Build visual dashboards for scenario planning  
