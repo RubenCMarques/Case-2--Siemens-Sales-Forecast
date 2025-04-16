@@ -1,16 +1,124 @@
-# Case-2 Siemens Sales Forecast
+Siemens Sales Forecast
+Introduction
+This project focuses on improving sales forecasting accuracy for Siemens' Smart Infrastructure division in Germany using data science techniques. The objective is to develop a monthly sales forecasting model per product category, integrating macroeconomic variables to enhance accuracy, reduce bias, and support data-driven decision-making. Siemens previously relied on manual and judgment-based forecasts, which lacked scalability and consistency in volatile market conditions.
 
-## Introduction  
-This project focuses on developing a sales forecasting model for Siemens using historical sales data. By leveraging data science techniques, we aim to create a predictive model that provides accurate sales estimates, helping Siemens optimize decision-making and resource allocation. The dataset spans 2.5 years of sales records, and our approach involves exploratory data analysis (EDA), feature engineering, and the application of machine learning models to enhance forecast accuracy.  
+By applying machine learning and time series forecasting methods, we analyzed historical sales trends, macroeconomic indicators, and seasonal behaviors. XGBoost with hyperparameter optimization proved to be the most effective approach, outperforming classical time series models and delivering robust predictive performance.
 
-## Project Overview  
-In a complex and data-driven world, accurate forecasting of sales is essential to ensure operational efficiency, resource allocation, and strategic decision-making. Being a global leader in technology and innovation, Siemens wants to introduce artificial intelligence into the heart of its business. To this end, the present project seeks to develop a sales forecasting model for Siemens' Smart Infrastructure business unit in Germany based on past sales data and macroeconomic variables to improve forecast accuracy and business performance.
-The main objectives were to create a robust, automated forecasting pipeline capable of delivering monthly sales predictions per product category, include external economic variables, and evaluate model performance using RMSE, time efficiency, and responsiveness. The project aimed to reduce human bias and enhance Siemens' forecasting processes with scalable machine learning approaches.
-Through a systematic CRISP-DM process, the team preprocessed and cleaned historical sales data and macroeconomic factors. SARIMA was applied to forecast economic factors, while various algorithms were tried for sales forecasting. Among these, XGBoost with hyperparameter optimization achieved the lowest average RMSE across categories and was therefore the better performing model overall. However, inconsistencies in preprocessing, especially missing values between the training and test sets, highlighted the need for further refinement before the model can be reliably deployed.
-To move forward, it is recommended to finalize and standardize the preprocessing pipeline, automate data integration and retraining processes, and deploy the forecasting model into Siemens' internal environment using a batch deployment strategy. 
-In short, the project has immense potential for AI application in sales forecasting at Siemens. With certain improvements, the model can be a useful tool, facilitating data-driven decision-making, optimizing resource allocation, and assisting Siemens in realizing its broader digital transformation goals.
+Table of Contents
+Project Overview
 
-## Dataset  
-- **Source**: Sales data provided by Siemens.
-- **Time Period**: 2.5 years  
-- **Features**: 1) date records which are daily transactions in dd.mm.yyyy format, 2)  the product category for each transaction, and 3) sales revenue in euro per transaction
+Dataset
+
+Methodology
+
+Technologies Used
+
+Results
+
+Deployment and Maintenance
+
+Future Improvements
+
+Project Overview
+Siemens aims to leverage artificial intelligence in its internal operations to improve forecast accuracy, reduce operational inefficiencies, and enhance planning decisions. The Smart Infrastructure business unit is an ideal use case, where product-level monthly sales predictions are essential for managing working capital and supply chain demands.
+
+The key goals were:
+
+Create an automated and scalable forecasting pipeline
+
+Incorporate external economic indicators
+
+Evaluate performance using RMSE and responsiveness
+
+Reduce human intervention in forecasting
+
+Dataset
+Sales Data
+
+Source: Siemens Smart Infrastructure (Germany)
+
+Period: October 2018 to April 2022
+
+Features: Date, product category (14 total), and sales revenue per transaction
+
+Macroeconomic Data
+
+Source: Public economic indicators
+
+Period: February 2004 to April 2022
+
+Features: Industrial indices, commodity prices, producer prices across countries (e.g., Germany, US, China)
+
+Methodology
+Exploratory Data Analysis (EDA):
+
+Identified seasonality and cyclic trends
+
+Revenue skewed towards top-performing products
+
+Applied seasonal decomposition
+
+Feature Engineering:
+
+Lag values (last month, last year)
+
+Moving averages
+
+Temporal indicators (month, quarter)
+
+Macroeconomic feature deltas
+
+Top 10 features per product selected using XGBoost
+
+Modeling:
+
+SARIMA for macroeconomic forecasts
+
+Prophet for baseline time series forecasting
+
+XGBoost with and without hyperparameter tuning
+
+Evaluation based on RMSE across 14 product categories
+
+Technologies Used
+Python
+
+Pandas, NumPy
+
+Scikit-learn
+
+XGBoost
+
+Statsmodels (SARIMA)
+
+Prophet (Meta)
+
+Matplotlib, Seaborn
+
+Results
+
+Model	Average RMSE
+Prophet Vanilla	931,954.35
+Prophet + Features	2,698,845.85
+XGBoost	709,405.58
+XGBoost Tuned	703,202.77
+XGBoost with hyperparameter tuning was the most effective model overall. It handled nonlinearity, feature interaction, and external variables better than the alternatives.
+
+Deployment and Maintenance
+Strategy:
+
+Batch deployment on a monthly basis
+
+Integrated into Siemens’ internal systems
+
+Forecasts delivered to BI tools for planning
+
+Monitoring:
+
+Monthly RMSE evaluation
+
+Retraining scheduled quarterly
+
+Alerts for performance drops
+
+Full version control for all deployments
