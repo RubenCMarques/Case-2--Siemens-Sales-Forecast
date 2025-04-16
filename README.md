@@ -10,8 +10,7 @@ By applying machine learning and time series forecasting methods, we analyzed hi
 ## Table of Contents  
 - [Project Overview](#project-overview)  
 - [Dataset](#dataset)  
-- [Methodology](#methodology)  
-- [Technologies Used](#technologies-used)  
+- [Methodology](#methodology)   
 - [Results](#results)  
 - [Deployment and Maintenance](#deployment-and-maintenance)  
 - [Future Improvements](#future-improvements)  
