@@ -94,4 +94,3 @@ XGBoost with hyperparameter tuning was the most effective model overall. It hand
 - Integrate deep learning models for time series  
 - Expand feature set (e.g., marketing events, customer data)  
 - Build visual dashboards for scenario planning  
-- Use SHAP for explainable AI and decision transparency  
