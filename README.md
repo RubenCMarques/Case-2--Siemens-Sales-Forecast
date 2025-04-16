@@ -63,17 +63,6 @@ The key goals were:
 
 ---
 
-## Technologies Used  
-- Python  
-- Pandas, NumPy  
-- Scikit-learn  
-- XGBoost  
-- Statsmodels (SARIMA)  
-- Prophet  
-- Matplotlib, Seaborn  
-
----
-
 ## Results  
 | Model                  | Average RMSE        |
 |------------------------|---------------------|
